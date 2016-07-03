@@ -7,6 +7,7 @@
 //
 
 #include <queue>
+#include <algorithm>
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
