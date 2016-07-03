@@ -2,11 +2,9 @@
 //  main.cpp
 //  median-finder
 //
-//  Created by Luigi Damato 2 on 7/3/16.
-//  Copyright © 2016 Luigi Damato 2. All rights reserved.
+//  Copyright © 2016 Luigi Damato. All rights reserved.
 //
 
-#include "median_finder.hpp"
 #include "median_finder.cpp"
 #include <iostream>
 
