@@ -6,12 +6,19 @@
 //  Copyright © 2016 Luigi Damato 2. All rights reserved.
 //
 
-#include <queue>
-#include <algorithm>
+#include "median_finder.hpp"
 #include <iostream>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    int arr[] = {1,5,3,7,1,0,9,8,5,2,3};
+    median_finder<int> mf;
+    
+    for (int i : arr)
+    {
+        mf.add(i);
+        std::cout << "Current median is: " << mf.get() << std::endl;
+    }
+    
     return 0;
 }

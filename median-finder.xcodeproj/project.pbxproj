@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1270EAC61D299094004E2179 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1270EAC51D299094004E2179 /* main.cpp */; };
+		61D6D6201D299516002D3113 /* median_finder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 61D6D61E1D299516002D3113 /* median_finder.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		1270EAC21D299094004E2179 /* median-finder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "median-finder"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1270EAC51D299094004E2179 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		61D6D61E1D299516002D3113 /* median_finder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = median_finder.cpp; sourceTree = "<group>"; };
+		61D6D61F1D299516002D3113 /* median_finder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = median_finder.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				1270EAC51D299094004E2179 /* main.cpp */,
+				61D6D61E1D299516002D3113 /* median_finder.cpp */,
+				61D6D61F1D299516002D3113 /* median_finder.hpp */,
 			);
 			path = "median-finder";
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1270EAC61D299094004E2179 /* main.cpp in Sources */,
+				61D6D6201D299516002D3113 /* median_finder.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +245,7 @@
 				1270EACB1D299094004E2179 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
