@@ -9,12 +9,8 @@
 #include <iostream>
 
 template<class T>
-median_finder<T>::median_finder(const T& first)
+median_finder<T>::median_finder()
 {
-    if (first || first == 0)
-    {
-        _left.push(first);
-    }
 }
 
 template<class T>
@@ -66,7 +62,7 @@ void median_finder<T>::add(const T& elem)
 }
 
 template<class T>
-T median_finder<T>::get()
+double median_finder<T>::get()
 {
     if (_left.size() > _right.size())
         return _left.top();
@@ -76,7 +72,7 @@ T median_finder<T>::get()
     T t1 = _left.top(),
       t2 = _right.top();
     
-    return (t1 + t2) / 2;
+    return (t1 + t2) / 2.0;
 }
 
 template<class T>
@@ -122,3 +118,9 @@ void median_finder<T>::_debug()
     }
     
 }
+
+template class median_finder<int>;
+template class median_finder<float>;
+template class median_finder<double>;
+template class median_finder<unsigned>;
+template class median_finder<long>;

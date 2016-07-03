@@ -18,12 +18,13 @@ class median_finder {
 private:
     std::priority_queue<T, std::vector<T>, std::less<T>>    _left;
     std::priority_queue<T, std::vector<T>, std::greater<T>> _right;
+
     void _debug();
     
 public:
-    median_finder(const T& first = NULL);
+    median_finder();
     void add(const T& elem);
-    T get();
+    double get();
     size_t size();
 };
 
