@@ -19,8 +19,11 @@ private:
     std::priority_queue<T, std::vector<T>, std::less<T>>    _left;
     std::priority_queue<T, std::vector<T>, std::greater<T>> _right;
 
+    void _push(const T& elem);
+    bool _is_balanced();
+    void _balance();
     void _debug();
-    
+
 public:
     median_finder();
     void add(const T& elem);

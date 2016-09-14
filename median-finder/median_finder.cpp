@@ -18,23 +18,42 @@ void median_finder<T>::add(const T& elem)
 {
     if (elem || elem == 0)
     {
-        if (size() < 2)
-        {
-            if (_left.empty()) _left.push(elem);
-            else if (elem >= _left.top())
-                _right.push(elem);
-            else
-            {
-                _right.push(_left.top());
-                _left.pop();
-                _left.push(elem);
-            }
-            
-//            _debug();
-            
-            return;
-        }
+        _push(elem);
 
+        
+        if (!_is_balanced()) {
+            _balance();
+        }
+    }
+    
+    // _debug();
+}
+
+template<class T>
+void median_finder<T>::_push(const T& elem)
+{
+    if (size() < 2)
+    {
+        if (_left.empty())
+        {
+            _left.push(elem);
+        }
+        else if (elem >= _left.top())
+        {
+            _right.push(elem);
+        }
+        else
+        {
+            _right.push(_left.top());
+            _left.pop();
+            _left.push(elem);
+        }
+        
+        // _debug();
+
+    }
+    else
+    {
         T smaller = _left.top();
         T bigger = _right.top();
         
@@ -45,20 +64,7 @@ void median_finder<T>::add(const T& elem)
         else if (_left.size() < _right.size())
             _left.push(elem);
         else _right.push(elem);
-        
-        if (_left.size() > _right.size())
-        {
-            _right.push(_left.top());
-            _left.pop();
-        }
-        else if (_right.size() > _left.size())
-        {
-            _left.push(_right.top());
-            _right.pop();
-        }
     }
-    
-//    _debug();
 }
 
 template<class T>
@@ -117,6 +123,28 @@ void median_finder<T>::_debug()
         
     }
     
+}
+
+template<class T>
+bool median_finder<T>::_is_balanced()
+{
+    return _left.size() >= _right.size() - 1
+        && _left.size() <= _right.size() + 1;
+}
+
+template<class T>
+void median_finder<T>::_balance()
+{
+    if (_left.size() > _right.size())
+    {
+        _right.push(_left.top());
+        _left.pop();
+    }
+    else if (_right.size() > _left.size())
+    {
+        _left.push(_right.top());
+        _right.pop();
+    }
 }
 
 template class median_finder<int>;
